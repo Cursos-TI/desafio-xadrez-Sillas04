@@ -13,11 +13,11 @@ int main() {
     int movimentacao;
     int menu_inicio;
 
-    printf("--------- Oque desejar vizualizar ---------\n\n");
-    printf("1 - Ver movimentação de Bispo: \n");
-    printf("2 - Ver movimentação de Torre: \n");
-    printf("3 - Ver movimentação de Rainha: \n");
-    printf("4 - Ver movimentação de Cavalo: \n");
+    printf("----- Qual peça deseja movimentar? -----\n\n");
+    printf("1 - Bispo: \n");
+    printf("2 - Torre: \n");
+    printf("3 - Rainha: \n");
+    printf("4 - Cavalo: \n");
     scanf("%d", &menu_inicio);
    
 
@@ -25,30 +25,37 @@ int main() {
     {
     case 1:
         // Implementação de Movimentação do Bispo
+        printf("Movimentação Bispo \n");
         for(bispo = 0 ; bispo < 5 ; bispo++ )
         {
-            printf("Bispo: %d Diagonal, cima! \n", bispo);
+            printf("%d Casa, diagonal superior direita! \n", bispo);
         }      
     break;
 
     case 2:
         // Implementação de Movimentação da Torre
+         printf("Movimentação Torre \n");
         for(torre = 0 ; torre < 5 ; torre++)
         {
-            printf("Torre: %d Direita! \n", torre);
+            printf("%d Casa, direita! \n", torre);
         }        
     break;
 
     case 3:
         // Implementação de Movimentação da Rainha
+         printf("Movimentação Rainha \n");
         for(rainha = 0 ; rainha < 8 ; rainha++)
         {
-            printf("Rainha: %d Esquerda!\n", rainha);
+            printf("%d Casa, esquerda!\n", rainha);
         }        
     break;
 
     case 4:
-        // Espaço reservado para implementação cavalo! 
+        /*  Espaço reservado para implementação cavalo!
+            Cavalo move-se em tres casas com a última se tornando um "L" Ex: baixo,baixo, esquerda.
+            loops aninhados!
+
+        */
     break;
     
     default:
