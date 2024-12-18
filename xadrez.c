@@ -11,24 +11,53 @@ int main() {
     int rainha;
     int cavalo = 0;
     int movimentacao;
+    int menu_inicio;
 
-    // Implementação de Movimentação do Bispo
-    for(bispo = 0 ; bispo < 5 ; bispo++ )
-    {
-        printf("Bispo: %d Diagonal, cima! \n", bispo);
-    }    
+    printf("--------- Oque desejar vizualizar ---------\n\n");
+    printf("1 - Ver movimentação de Bispo: \n");
+    printf("2 - Ver movimentação de Torre: \n");
+    printf("3 - Ver movimentação de Rainha: \n");
+    printf("4 - Ver movimentação de Cavalo: \n");
+    scanf("%d", &menu_inicio);
+   
 
-    // Implementação de Movimentação da Torre
-    for(torre = 0 ; torre < 5 ; torre++)
+    switch (menu_inicio)
     {
-        printf("Torre: %d Direita! \n", torre);
-    }   
+    case 1:
+        // Implementação de Movimentação do Bispo
+        for(bispo = 0 ; bispo < 5 ; bispo++ )
+        {
+            printf("Bispo: %d Diagonal, cima! \n", bispo);
+        }      
+    break;
 
-    // Implementação de Movimentação da Rainha
-    for(rainha = 0 ; rainha < 8 ; rainha++)
-    {
-        printf("Rainha: %d Esquerda!\n", rainha);
+    case 2:
+        // Implementação de Movimentação da Torre
+        for(torre = 0 ; torre < 5 ; torre++)
+        {
+            printf("Torre: %d Direita! \n", torre);
+        }        
+    break;
+
+    case 3:
+        // Implementação de Movimentação da Rainha
+        for(rainha = 0 ; rainha < 8 ; rainha++)
+        {
+            printf("Rainha: %d Esquerda!\n", rainha);
+        }        
+    break;
+
+    case 4:
+        // Espaço reservado para implementação cavalo! 
+    break;
+    
+    default:
+        printf("Comando inválido!!!\n");
+    break;
     }
+    
+
+
    
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
