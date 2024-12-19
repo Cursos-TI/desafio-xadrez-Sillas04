@@ -6,11 +6,7 @@
 
 int main() {
     
-    int bispo;
-    int torre;
-    int rainha;
-    int cavalo = 0;
-    int movimentacao;
+    int bispo, torre, rainha, cavalo;
     int menu_inicio;
 
     printf("----- Qual peça deseja movimentar? -----\n\n");
@@ -18,44 +14,54 @@ int main() {
     printf("2 - Torre: \n");
     printf("3 - Rainha: \n");
     printf("4 - Cavalo: \n");
-    scanf("%d", &menu_inicio);
-   
+    scanf("%d", &menu_inicio);   
 
     switch (menu_inicio)
     {
     case 1:
-        // Implementação de Movimentação do Bispo
+        // Implementação de Movimentação do Bispo 5x
         printf("Movimentação Bispo \n");
-        for(bispo = 0 ; bispo < 5 ; bispo++ )
+
+        for (bispo = 0; bispo < 5; bispo++)
         {
-            printf("%d Casa, diagonal superior direita! \n", bispo);
-        }      
+            do
+            {
+               printf("Cima, ");               
+            } while (bispo == 5);
+            
+        printf("direita! \n");
+        }
+        
+
     break;
 
     case 2:
         // Implementação de Movimentação da Torre
-         printf("Movimentação Torre \n");
+        printf("Movimentação Torre \n");
         for(torre = 0 ; torre < 5 ; torre++)
         {
-            printf("%d Casa, direita! \n", torre);
+            printf("Direita! \n");
         }        
     break;
 
     case 3:
         // Implementação de Movimentação da Rainha
-         printf("Movimentação Rainha \n");
-        for(rainha = 0 ; rainha < 8 ; rainha++)
-        {
-            printf("%d Casa, esquerda!\n", rainha);
+        printf("Movimentação Rainha \n");
+        for(rainha = 0 ; rainha < 8 ; rainha++){
+            printf("Esquerda!\n");
         }        
     break;
 
     case 4:
-        /*  Espaço reservado para implementação cavalo!
-            Cavalo move-se em tres casas com a última se tornando um "L" Ex: baixo,baixo, esquerda.
-            loops aninhados!
-
-        */
+        //  Implementação de Movimentação do Cavalo
+        printf("Movimentação Cavalo \n");
+        for ( cavalo = 0; cavalo < 1; cavalo++){
+            while (cavalo < 3){            
+               printf("baixo, ");
+               cavalo++;
+            }      
+        printf("esquerda!\n");
+        }
     break;
     
     default:
